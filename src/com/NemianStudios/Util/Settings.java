@@ -1,12 +1,17 @@
 package com.NemianStudios.Util;
 
-import java.io.*;
-import java.nio.charset.*;
-import java.nio.file.*;
-import java.sql.Struct;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
-import static java.nio.file.StandardOpenOption.*;
+import static java.nio.file.StandardOpenOption.APPEND;
+import static java.nio.file.StandardOpenOption.CREATE;
 
 
 public class Settings {

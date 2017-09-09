@@ -11,5 +11,6 @@
     <orderEntry type="library" name="gluegen-rt" level="project" />
     <orderEntry type="library" name="jogl-all" level="project" />
     <orderEntry type="library" name="jogl-all-noawt-natives-windows-amd64" level="project" />
+    <orderEntry type="library" name="JBullet" level="project" />
   </component>
 </module>

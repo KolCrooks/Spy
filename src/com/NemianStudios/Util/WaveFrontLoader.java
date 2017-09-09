@@ -9,18 +9,11 @@
 
 package com.NemianStudios.Util;
 
-import java.awt.Color;
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Vector;
-
-import com.NemianStudios.Base.customDataTypes.ModelLoadException;
 import com.NemianStudios.Base.customDataTypes.*;
+
+import java.awt.*;
+import java.io.*;
+import java.util.Vector;
 
 /**
  *
@@ -357,10 +350,7 @@ public class WaveFrontLoader implements iLoader {
             
             if(mat.strName.equals(s[1])){
                 materialID = i;
-                if(mat.strFile != null)
-                    hasTexture = true;
-                else
-                    hasTexture = false;
+                hasTexture = mat.strFile != null;
                 break;
             }
         }

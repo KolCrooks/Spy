@@ -1,6 +1,6 @@
 package com.NemianStudios.Display;
 
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 
 public class DisplayHandle {
 

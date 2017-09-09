@@ -3,7 +3,7 @@ package com.NemianStudios.Entitys;
 import com.NemianStudios.Base.customDataTypes.Model;
 import com.NemianStudios.Base.customDataTypes.ModelLoadException;
 import com.NemianStudios.Util.WaveFrontLoader;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 
 public class ModelEntity {
 

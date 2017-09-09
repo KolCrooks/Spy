@@ -36,8 +36,6 @@
 
 package com.NemianStudios.Base.customDataTypes;
 
-import java.util.Vector;
-
 public class Mesh
 {
     public int numOfVerts = 0;

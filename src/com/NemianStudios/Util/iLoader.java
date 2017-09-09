@@ -9,12 +9,13 @@
 
 package com.NemianStudios.Util;
 
-import com.NemianStudios.Base.customDataTypes.*;
+import com.NemianStudios.Base.customDataTypes.Model;
+import com.NemianStudios.Base.customDataTypes.ModelLoadException;
 
 /**
  *
  * @author RodgersGB
  */
 public interface iLoader {
-    public Model load(String path) throws ModelLoadException;
+    Model load(String path) throws ModelLoadException;
 }

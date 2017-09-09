@@ -36,7 +36,7 @@
 
 package com.NemianStudios.Base.customDataTypes;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Material
 {

@@ -1,9 +1,9 @@
 package com.NemianStudios.Display;
 
 
-
-import com.jogamp.opengl.*;
-import com.NemianStudios.Main;
+import com.NemianStudios.Util.Settings;
+import com.jogamp.opengl.GLCapabilities;
+import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.awt.GLCanvas;
 
 import javax.swing.*;
@@ -21,14 +21,14 @@ public class Window extends JFrame{
                  // The canvas
                  final GLCanvas glcanvas = new GLCanvas(capabilities);
                  glcanvas.addGLEventListener(new DrawListener());
-                 glcanvas.setSize(Main.settings.gameSettings.WIDTH, Main.settings.gameSettings.HEIGHT);
+                 glcanvas.setSize(Settings.gameSettings.WIDTH, Settings.gameSettings.HEIGHT);
 
                  //creating frame
                  final Frame frame = new Frame ("Spy");
 
                  //adding canvas to frame
                  frame.add(glcanvas);
-                 frame.setSize( Main.settings.gameSettings.WIDTH, Main.settings.gameSettings.HEIGHT );
+                 frame.setSize(Settings.gameSettings.WIDTH, Settings.gameSettings.HEIGHT);
                  frame.setVisible(true);
              }
 
