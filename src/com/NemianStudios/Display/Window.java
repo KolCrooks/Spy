@@ -20,7 +20,7 @@ public class Window extends JFrame{
 
                  // The canvas
                  final GLCanvas glcanvas = new GLCanvas(capabilities);
-                 glcanvas.addGLEventListener(new Draw());
+                 glcanvas.addGLEventListener(new DrawListener());
                  glcanvas.setSize(Main.settings.gameSettings.WIDTH, Main.settings.gameSettings.HEIGHT);
 
                  //creating frame
@@ -30,7 +30,6 @@ public class Window extends JFrame{
                  frame.add(glcanvas);
                  frame.setSize( Main.settings.gameSettings.WIDTH, Main.settings.gameSettings.HEIGHT );
                  frame.setVisible(true);
-
              }
 
 }
