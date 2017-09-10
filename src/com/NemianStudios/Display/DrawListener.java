@@ -1,5 +1,6 @@
 package com.NemianStudios.Display;
 
+import com.NemianStudios.Input.MovementManager;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
 import com.jogamp.opengl.GLEventListener;
@@ -9,17 +10,22 @@ import com.jogamp.opengl.glu.GLU;
 public class DrawListener implements GLEventListener {
 
     public static DisplayHandle Displayer;
+    public static MovementManager movementManager;
+    public static Camera camera;
     private GLU glu = new GLU();
 
     public DrawListener(){
     //Add Display Handle
         Displayer = new DisplayHandle();
+        movementManager = new MovementManager();
+        camera = new Camera();
     }
 
     @Override
     public void display(GLAutoDrawable drawable) {
         final GL2 gl = drawable.getGL().getGL2();
         Displayer.update(gl);
+        movementManager.update(camera);
     }
 
     @Override
@@ -30,6 +36,7 @@ public class DrawListener implements GLEventListener {
     @Override
     public void init(GLAutoDrawable drawable) {
         // method body
+        camera.init(glu);
     }
 
     @Override
