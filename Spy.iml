@@ -8,7 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jar" level="project" />
-    <orderEntry type="library" name="JBullet" level="project" />
     <orderEntry type="library" name="Jogl" level="project" />
+    <orderEntry type="library" name="Jbullet" level="project" />
   </component>
 </module>

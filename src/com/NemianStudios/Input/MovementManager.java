@@ -22,10 +22,10 @@ public class MovementManager {
         public static double yaw = 0;
         public static double pitch = 0;
 
-        public void Move(int x, int y, int z) {
-            pos.x += x;
-            pos.y += y;
-            pos.z += z;
+        public void Move(int sideways, int up, int forward) {
+            pos.x += sideways;
+            pos.y += up;
+            pos.z += forward;
         }
 
         public void pan(double var) {

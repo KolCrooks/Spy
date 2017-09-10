@@ -12,7 +12,6 @@ public class keyBoard implements KeyListener {
         public static boolean a;
         public static boolean s;
         public static boolean d;
-
     }
 
     keys Keys;

@@ -46,13 +46,11 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        MovementManager.Command c = new MovementManager.Command();
-        c.addcommand(MovementManager.Command.MOVECAMERADIRECTION);
-        DrawListener.movementManager.addtocommandlist(c);
+
         double mouseX = e.getX();
         double mouseY = e.getY();
-        c.pan(((Window.frame.getWidth() / 2) - mouseX) / 36000000);
-        c.tilt(((Window.frame.getHeight() / 2) - mouseY) / 36000000);
+        DrawListener.camera.pan(((Window.frame.getWidth() / 2) - mouseX) / 200);
+        DrawListener.camera.tilt(((Window.frame.getHeight() / 2) - mouseY) / 200);
         Robot robot;
         try {
             robot = new Robot();
