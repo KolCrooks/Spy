@@ -1,28 +1,31 @@
 package com.NemianStudios.Entitys;
 
-import com.NemianStudios.Base.customDataTypes.Model;
-import com.NemianStudios.Base.customDataTypes.ModelLoadException;
-import com.NemianStudios.Util.WaveFrontLoader;
+import com.NemianStudios.Util.GLModel;
+import com.NemianStudios.Util.ModelLoaderOBJ;
 import com.jogamp.opengl.GL2;
+import com.sun.javafx.geom.Vec3d;
 
 public class ModelEntity {
 
-    private Model model;
 
-    public void loadobject(String uri){
-        WaveFrontLoader loader = new WaveFrontLoader();
-        try {
-            this.model = loader.load(uri);
-        }catch(ModelLoadException e){
-            e.printStackTrace();
+    private Vec3d pos = new Vec3d(0, 0, 0);
+    private double yaw = 0;
+    private double pan = 0;
+    private GLModel model;
+
+    public void loadobject(GL2 gl, String ObjectPath, String MTLPath) {
+        model = ModelLoaderOBJ.LoadModel(ObjectPath, MTLPath, gl);
+        if (model == null) {
+            System.out.println("ERROR");
         }
     }
 
-    protected void update(){
-
+    public GLModel getModel() {
+        return model;
     }
-    protected void draw(GL2 gl){
 
+    public Vec3d getPos() {
+        return pos;
     }
 
 }

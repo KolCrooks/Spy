@@ -19,8 +19,8 @@ public class MovementManager {
         public static int Type = NONE;
         public static Vec3d pos = new Vec3d(0, 0, 0);
 
-        public static int yaw = 0;
-        public static int pitch = 0;
+        public static double yaw = 0;
+        public static double pitch = 0;
 
         public void Move(int x, int y, int z) {
             pos.x += x;
@@ -28,19 +28,19 @@ public class MovementManager {
             pos.z += z;
         }
 
-        public void pan(int var) {
+        public void pan(double var) {
             yaw += var;
         }
 
-        public void tilt(int var) {
+        public void tilt(double var) {
             pitch += var;
         }
 
-        public int getYaw() {
+        public double getYaw() {
             return yaw;
         }
 
-        public int getPitch() {
+        public double getPitch() {
             return pitch;
         }
 
@@ -56,7 +56,8 @@ public class MovementManager {
     private Vector<Command> commandList = new Vector<Command>();
 
     public void update(Camera camera) {
-        for (Command command : commandList) {
+        for (int i = 0; i < commandList.size(); i++) {
+            Command command = commandList.get(i);
             for (int commandtype : command.commands) {
                 switch (commandtype) {
                     case Command.MOVECAMERADIRECTION:
@@ -64,10 +65,11 @@ public class MovementManager {
                         camera.tilt(command.getPitch());
                         break;
                     case Command.MOVECAMERAPOSTION:
-                        camera.Move(command.getPos());
+                        camera.MoveCamera(command.getPos());
                         break;
                 }
             }
+            commandList.remove(command);
         }
     }
 
