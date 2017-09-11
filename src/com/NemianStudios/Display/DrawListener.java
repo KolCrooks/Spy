@@ -33,6 +33,7 @@ public class DrawListener implements GLEventListener {
 
         gl.glLoadIdentity();
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
+        gl.glClearColor(255.0f,255.0f,255.0f,1.0f);
         camera.updateCamera(gl, glu);
         gl.glPushMatrix();
         Displayer.update(gl);
@@ -68,12 +69,13 @@ public class DrawListener implements GLEventListener {
         // method body
         camera.init(glu);
         ModelEntity e = new ModelEntity();
-        e.loadobject(gl, "C:\\Users\\kol\\Documents\\src\\AL05a.obj", "C:\\Users\\kol\\Documents\\src\\AL05a.mtl");
-        e.setPitch(-90);
-        ModelEntity e2 = new ModelEntity();
-        e2.loadobject(gl, "C:\\Users\\kol\\Desktop\\Map File type\\XYZ.obj", "C:\\Users\\kol\\Desktop\\Map File type\\XYZ.mtl");
-        e2.setScaler(100.0f);
-        entityManager.addtocommandlist(e2);
+        e.loadobject(gl, "D:\\Documents\\Models\\House\\House.obj", "D:\\Documents\\Models\\House\\House.mtl");
+        e.setScaler(100000000.f);
+//        e.setPitch(-90);
+//        ModelEntity e2 = new ModelEntity();
+//        e2.loadobject(gl, "C:\\Users\\kol\\Desktop\\Map File type\\XYZ.obj", "C:\\Users\\kol\\Desktop\\Map File type\\XYZ.mtl");
+//        e2.setScaler(100.0f);
+//        entityManager.addtocommandlist(e2);
         entityManager.addtocommandlist(e);
     }
 

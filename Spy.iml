@@ -10,5 +10,6 @@
     <orderEntry type="library" name="jar" level="project" />
     <orderEntry type="library" name="Jogl" level="project" />
     <orderEntry type="library" name="Jbullet" level="project" />
+    <orderEntry type="library" name="lwjgl" level="project" />
   </component>
 </module>

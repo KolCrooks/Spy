@@ -1,8 +1,6 @@
 package com.NemianStudios.Entitys;
 
-import com.NemianStudios.Util.GLModel;
-import com.NemianStudios.Util.ModelLoaderOBJ;
-import com.jogamp.opengl.GL2;
+import org.lwjgl.opengl.*;
 import com.sun.javafx.geom.Vec3d;
 
 public class ModelEntity {
@@ -12,9 +10,9 @@ public class ModelEntity {
     private double yaw = 0;
     private double pitch = 0;
     private float scaler = 1.0f; //1.0 by default
-    private GLModel model;
+    private Obj model;
 
-    public void loadobject(GL2 gl, String ObjectPath, String MTLPath) {
+    public void loadobject(GL gl, String ObjectPath, String MTLPath) {
         model = ModelLoaderOBJ.LoadModel(ObjectPath, MTLPath, gl);
         if (model == null) {
             System.out.println("ERROR");

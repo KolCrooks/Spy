@@ -27,19 +27,19 @@ public class Camera {
     //Moves camera to Vec3 position
     public void MoveCamera(Vec3d pos) {
         if (pos.z > 0) { //If Key 'W'
-            Camera.pos.x += Math.cos(yaw) * 10;
-            Camera.pos.z += Math.sin(yaw) * 10;
+            Camera.pos.z += Math.cos(Math.toRadians(yaw)) * 10;
+            Camera.pos.x += Math.sin(Math.toRadians(yaw)) * 10;
         } else if (pos.z < 0) { //If Key 'S'
-            Camera.pos.x += Math.cos(yaw) * -10;
-            Camera.pos.z += Math.sin(yaw) * -10;
+            Camera.pos.z += Math.cos(Math.toRadians(yaw)) * -10;
+            Camera.pos.x += Math.sin(Math.toRadians(yaw)) * -10;
         }
 
         if (pos.x > 0) { //If Key 'A'
-            Camera.pos.x += Math.sin(yaw + 90) * 10;
-            Camera.pos.z += Math.cos(yaw + 90) * 10;
+            Camera.pos.z += Math.sin(Math.toRadians(yaw) + 90) * 10;
+            Camera.pos.x += Math.cos(Math.toRadians(yaw) + 90) * 10;
         } else if (pos.x < 0) { //If Key 'D'
-            Camera.pos.x += Math.sin(yaw - 90) * 10;
-            Camera.pos.z += Math.cos(yaw - 90) * 10;
+            Camera.pos.z += Math.sin(Math.toRadians(yaw) - 90) * 10;
+            Camera.pos.x += Math.cos(Math.toRadians(yaw) - 90) * 10;
         }
         Camera.pos.y += pos.y * 10;
     }
@@ -63,7 +63,7 @@ public class Camera {
     public void init(GLU glu) {
         glu.gluPerspective(fovY, aspectratio,
                 0.5f/**Specifies the distance from the viewer to the near clipping plane**/,
-                10000.0f/**Specifies the distance from the viewer to the far clipping plane**/);
+                10000000.0f/**Specifies the distance from the viewer to the far clipping plane**/);
 
     }
 

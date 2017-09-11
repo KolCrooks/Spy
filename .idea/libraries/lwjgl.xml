@@ -1,0 +1,85 @@
+<component name="libraryTable">
+  <library name="lwjgl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-assimp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-bgfx.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-egl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-glfw.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-jawt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-jemalloc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-lmdb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nanovg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nfd.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nuklear.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-openal.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opencl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opengl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opengles.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-openvr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-ovr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-par.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-sse.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-stb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-tinyexr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-tinyfd.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-vulkan.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-xxhash.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-yoga.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-assimp-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-bgfx-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-egl-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-glfw-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-jawt-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-jemalloc-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-lmdb-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nanovg-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nfd-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nuklear-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-openal-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opencl-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opengl-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opengles-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-openvr-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-ovr-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-par-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-sse-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-stb-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-tinyexr-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-tinyfd-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-vulkan-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-xxhash-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-yoga-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-assimp-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-bgfx-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-egl-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-glfw-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-jawt-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-jemalloc-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-lmdb-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nanovg-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nfd-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-nuklear-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-openal-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opencl-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opengl-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-opengles-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-openvr-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-ovr-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-par-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-sse-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-stb-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-tinyexr-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-tinyfd-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-vulkan-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-xxhash-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/NemianStudios/Base/Libs/Lwjgl/lwjgl-yoga-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
