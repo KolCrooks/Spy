@@ -12,6 +12,8 @@ public class keyBoard implements KeyListener {
         public static boolean a;
         public static boolean s;
         public static boolean d;
+        public static boolean SPACE;
+        public static boolean SHIFT;
     }
 
     keys Keys;
@@ -23,7 +25,7 @@ public class keyBoard implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         //Key Pressed
-        switch (e.getKeyChar()) {
+        switch (Character.toLowerCase(e.getKeyChar())) {
             case 'w':
                 keys.w = true;
                 break;
@@ -38,6 +40,14 @@ public class keyBoard implements KeyListener {
 
             case 'd':
                 keys.d = true;
+                break;
+        }
+        switch (e.getKeyCode()) {
+            case 32: //SPACE bar
+                keys.SPACE = true;
+                break;
+            case 16: //SHIFT bar
+                keys.SHIFT = true;
                 break;
         }
     }
@@ -60,6 +70,10 @@ public class keyBoard implements KeyListener {
             case 'd':
                 keys.d = false;
                 break;
+
+            case ' ':
+                keys.SPACE = false;
+                break;
         }
     }
 
@@ -76,19 +90,24 @@ public class keyBoard implements KeyListener {
         command.addcommand(MovementManager.Command.MOVECAMERAPOSTION);
         if (keys.w) {
             command.Move(0, 0, 1);
-            System.out.println("w");
         }
         if (keys.a) {
             command.Move(1, 0, 0);
-            System.out.println("a");
         }
         if (keys.s) {
             command.Move(0, 0, -1);
-            System.out.println("s");
         }
         if (keys.d) {
             command.Move(-1, 0, 0);
-            System.out.println("d");
+        }
+        if (keys.d) {
+            command.Move(-1, 0, 0);
+        }
+        if (keys.SPACE) {
+            command.Move(0, 1, 0);
+        }
+        if (keys.SHIFT) {
+            command.Move(0, -1, 0);
         }
         DrawListener.movementManager.addtocommandlist(command);
 

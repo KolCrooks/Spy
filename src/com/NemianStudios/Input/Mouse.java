@@ -63,7 +63,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
         double defY = (Window.frame.getHeight() + Window.frame.getY()) / 2;
 
         DrawListener.camera.pan(((defX) - mouseX) / 200);
-        DrawListener.camera.tilt((((defY) - mouseY) / 100) - 0.31 + -0.07999999999999999);
+        DrawListener.camera.tilt((((defY) - mouseY) / 100) - 0.31);
         try {
             robot.mouseMove((int) defX, (int) defY);
         } catch (Exception e1) {
