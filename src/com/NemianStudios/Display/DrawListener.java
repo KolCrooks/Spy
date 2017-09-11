@@ -33,13 +33,14 @@ public class DrawListener implements GLEventListener {
 
         gl.glLoadIdentity();
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
-
         camera.updateCamera(gl, glu);
         gl.glPushMatrix();
         Displayer.update(gl);
         movementManager.update(camera);
         entityManager.display(gl);
         Window.keyboard.update();
+
+
         gl.glPopMatrix();
 
         gl.glFlush();
@@ -68,6 +69,11 @@ public class DrawListener implements GLEventListener {
         camera.init(glu);
         ModelEntity e = new ModelEntity();
         e.loadobject(gl, "C:\\Users\\kol\\Documents\\src\\AL05a.obj", "C:\\Users\\kol\\Documents\\src\\AL05a.mtl");
+        e.setPitch(-90);
+        ModelEntity e2 = new ModelEntity();
+        e2.loadobject(gl, "C:\\Users\\kol\\Desktop\\Map File type\\XYZ.obj", "C:\\Users\\kol\\Desktop\\Map File type\\XYZ.mtl");
+        e2.setScaler(100.0f);
+        entityManager.addtocommandlist(e2);
         entityManager.addtocommandlist(e);
     }
 
@@ -77,9 +83,6 @@ public class DrawListener implements GLEventListener {
 
         // get the OpenGL 2 graphics object
         if(height <= 0) height = 1;
-
-        //preventing devided by 0 exception height = 1;
-        final float h = (float) width / (float) height;
 
         // display area to cover the entire window
         gl.glViewport(0, 0, width, height);

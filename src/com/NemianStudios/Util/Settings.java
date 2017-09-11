@@ -23,12 +23,14 @@ public class Settings {
         public int HEIGHT;
         public int WIDTH;
         boolean FULLSCREEN;
+        public double SENSITIVITY;
     }
 
     private String[] Settings_Default = {
       "Height = 600" + endl,       //Data[0]
       "Width = 800" + endl,        //Data[1]
       "Fullscreen = false" + endl, //Data[2]
+            "Sensitivity = 10" + endl, //Data[3]
     };
     public static GameSettingsStruct gameSettings;
 
@@ -82,6 +84,9 @@ public class Settings {
                     break;
                 case "fullscreen":
                     gameSettings.FULLSCREEN = Boolean.parseBoolean(s.split(" ")[2]);
+                    break;
+                case "sensitivity":
+                    gameSettings.SENSITIVITY = Integer.parseInt(s.split(" ")[2]);
                     break;
             }
         }

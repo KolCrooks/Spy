@@ -7,6 +7,16 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Mouse implements MouseListener, MouseMotionListener, MouseWheelListener {
+    Robot robot;
+
+    public Mouse() {
+
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void init() {
         //change cursor icon
@@ -49,15 +59,17 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
         double mouseX = e.getX();
         double mouseY = e.getY();
-        DrawListener.camera.pan(((Window.frame.getWidth() / 2) - mouseX) / 200);
-        DrawListener.camera.tilt(((Window.frame.getHeight() / 2) - mouseY) / 200);
-        Robot robot;
+        double defX = (Window.frame.getWidth() + Window.frame.getX()) / 2;
+        double defY = (Window.frame.getHeight() + Window.frame.getY()) / 2;
+
+        DrawListener.camera.pan(((defX) - mouseX) / 200);
+        DrawListener.camera.tilt((((defY) - mouseY) / 100) - 0.31 + -0.07999999999999999);
         try {
-            robot = new Robot();
-            robot.mouseMove(Window.frame.getWidth() / 2, Window.frame.getHeight() / 2);
-        } catch (AWTException e1) {
+            robot.mouseMove((int) defX, (int) defY);
+        } catch (Exception e1) {
             e1.printStackTrace();
         }
+
 
     }
 

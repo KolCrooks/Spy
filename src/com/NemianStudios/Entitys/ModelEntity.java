@@ -10,7 +10,8 @@ public class ModelEntity {
 
     private Vec3d pos = new Vec3d(0, 0, 0);
     private double yaw = 0;
-    private double pan = 0;
+    private double pitch = 0;
+    private float scaler = 1.0f; //1.0 by default
     private GLModel model;
 
     public void loadobject(GL2 gl, String ObjectPath, String MTLPath) {
@@ -28,4 +29,27 @@ public class ModelEntity {
         return pos;
     }
 
+    public double getYaw() {
+        return yaw;
+    }
+
+    public double getPitch() {
+        return pitch;
+    }
+
+    public void setYaw(double yaw) {
+        this.yaw = yaw;
+    }
+
+    public void setPitch(double pitch) {
+        this.pitch = pitch;
+    }
+
+    public float getScaler() {
+        return scaler;
+    }
+
+    public void setScaler(float scale) {
+        scaler = scale;
+    }
 }

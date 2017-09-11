@@ -17,7 +17,12 @@ public class EntityManager {
 
     public void display(GL2 gl) {
         for (ModelEntity Entity : loadedEntities) {
+            gl.glPushMatrix();
+            gl.glTranslatef((float) Entity.getPos().x, (float) Entity.getPos().y, (float) Entity.getPos().z);
+            gl.glRotatef((float) Entity.getPitch(), 1, 0, 0);
+            gl.glRotatef((float) Entity.getYaw(), 0, 1, 0);
             Entity.getModel().opengldraw(gl);
+            gl.glPopMatrix();
         }
     }
 }

@@ -20,26 +20,26 @@ public class Camera {
         if (yaw < -360) {
             yaw += 360;
         }
-        glu.gluLookAt(pos.x, pos.y, pos.z, pos.x + (Math.cos(Math.toRadians(yaw)) * 100), pos.y + (Math.sin(Math.toRadians(pitch)) * 100), pos.z + (Math.sin(Math.toRadians(yaw)) * 100), 0, 1, 0);
+        glu.gluLookAt(pos.x, pos.y, pos.z, pos.x + (Math.cos(Math.toRadians(yaw)) * 1000), pos.y + (Math.sin(Math.toRadians(pitch)) * 1000), pos.z + (Math.sin(Math.toRadians(yaw)) * 1000), 0, 1, 0);
         //System.out.println("X: " + pos.x + " Y: " + pos.y + " Z: " + pos.z + " Yaw: " + yaw + " Pitch: " + pitch);
     }
 
     //Moves camera to Vec3 position
     public void MoveCamera(Vec3d pos) {
-        if (pos.z > 0) {
+        if (pos.z > 0) { //If Key 'W'
             Camera.pos.x += Math.cos(yaw) * 10;
             Camera.pos.z += Math.sin(yaw) * 10;
-        } else if (pos.z < 0) {
+        } else if (pos.z < 0) { //If Key 'S'
             Camera.pos.x -= Math.cos(yaw) * 10;
             Camera.pos.z -= Math.sin(yaw) * 10;
         }
 
-        if (pos.x > 0) {
-            Camera.pos.x += Math.sin(yaw + 90) * pos.x;
-            Camera.pos.z += Math.cos(yaw + 90) * pos.x;
-        } else if (pos.x < 0) {
-            Camera.pos.x += Math.sin(yaw - 90) * pos.x;
-            Camera.pos.z += Math.cos(yaw - 90) * pos.x;
+        if (pos.x > 0) { //If Key 'A'
+            Camera.pos.x += Math.sin(yaw + 90) * 10;
+            Camera.pos.z += Math.cos(yaw + 90) * 10;
+        } else if (pos.x < 0) { //If Key 'D'
+            Camera.pos.x += Math.sin(yaw - 90) * 10;
+            Camera.pos.z += Math.cos(yaw - 90) * 10;
         }
         Camera.pos.y += pos.y;
     }
@@ -47,17 +47,17 @@ public class Camera {
     public void pan(double var) {
 
         yaw -= var;
-        System.out.println("Pan: " + var);
     }
 
     public void tilt(double var) {
-        if (pitch < 90 || var < 0) {
+        if (var > 0) {
+            if (pitch + var < 90)
+                pitch += var;
+        } else if (var < 0) {
+            if (pitch + var > -90)
             pitch += var;
-            System.out.println("Tilt: " + var);
-        } else if (pitch > -90 || var > 0) {
-            pitch += var;
-            System.out.println("Tilt: " + var);
         }
+        System.err.println(var);
     }
 
     public void init(GLU glu) {
