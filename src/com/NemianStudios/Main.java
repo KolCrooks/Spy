@@ -13,4 +13,7 @@ public class Main {
         mainWindow = new Window();
 
     }
+    public static long getWindow(){
+        return mainWindow.window;
+    }
 }

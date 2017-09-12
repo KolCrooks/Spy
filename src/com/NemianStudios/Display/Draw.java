@@ -9,18 +9,16 @@ import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.glu.GLU;
 
 
-public class DrawListener implements GLEventListener {
+public class Draw {
 
     public static DisplayHandle Displayer;
     public static MovementManager movementManager;
     public static EntityManager entityManager;
     public static Camera camera;
 
-    public GLU glu;
 
-    public DrawListener(){
+    public Draw(){
     //Add Display Handle
-        glu = new GLU();
         Displayer = new DisplayHandle();
         movementManager = new MovementManager();
         entityManager = new EntityManager();

@@ -1,11 +1,17 @@
 package com.NemianStudios.Input;
 
-import com.NemianStudios.Display.DrawListener;
+import com.NemianStudios.Display.Draw;
+import org.lwjgl.glfw.GLFWKeyCallback;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-public class keyBoard implements KeyListener {
+
+public class keyBoard extends GLFWKeyCallback {
+
+    @Override
+    public void invoke(long window, int key, int scancode, int action, int mods) {
+        //Key Pressed
+
+    }
 
     public static class keys {
         public static boolean w;
@@ -20,66 +26,6 @@ public class keyBoard implements KeyListener {
 
     public keyBoard() {
         Keys = new keys();
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        //Key Pressed
-        switch (Character.toLowerCase(e.getKeyChar())) {
-            case 'w':
-                keys.w = true;
-                break;
-
-            case 'a':
-                keys.a = true;
-                break;
-
-            case 's':
-                keys.s = true;
-                break;
-
-            case 'd':
-                keys.d = true;
-                break;
-        }
-        switch (e.getKeyCode()) {
-            case 32: //SPACE bar
-                keys.SPACE = true;
-                break;
-            case 16: //SHIFT bar
-                keys.SHIFT = true;
-                break;
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        switch (e.getKeyChar()) {
-            case 'w':
-                keys.w = false;
-                break;
-
-            case 'a':
-                keys.a = false;
-                break;
-
-            case 's':
-                keys.s = false;
-                break;
-
-            case 'd':
-                keys.d = false;
-                break;
-
-            case ' ':
-                keys.SPACE = false;
-                break;
-        }
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-
     }
 
     public void update() {
@@ -109,7 +55,7 @@ public class keyBoard implements KeyListener {
         if (keys.SHIFT) {
             command.Move(0, -1, 0);
         }
-        DrawListener.movementManager.addtocommandlist(command);
+        Draw.movementManager.addtocommandlist(command);
 
     }
 }
