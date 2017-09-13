@@ -1,7 +1,8 @@
 package com.NemianStudios.Input;
 
 import com.NemianStudios.Display.Camera;
-import com.sun.javafx.geom.Vec3d;
+import info.rockscode.util.Vector3f;
+
 
 import java.util.Vector;
 
@@ -17,7 +18,7 @@ public class MovementManager {
         public static final int MOVECAMERAPOSTION = 2;
 
         public static int Type = NONE;
-        public static Vec3d pos = new Vec3d(0, 0, 0);
+        public static Vector3f pos = new Vector3f(0, 0, 0);
 
         public static double yaw = 0;
         public static double pitch = 0;
@@ -44,7 +45,7 @@ public class MovementManager {
             return pitch;
         }
 
-        public Vec3d getPos() {
+        public Vector3f getPos() {
             return pos;
         }
 

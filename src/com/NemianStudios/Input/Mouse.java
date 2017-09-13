@@ -2,12 +2,14 @@ package com.NemianStudios.Input;
 
 import com.NemianStudios.Display.Draw;
 import com.NemianStudios.Display.Window;
+import com.NemianStudios.Main;
+import org.lwjgl.glfw.GLFWCursorPosCallback;
 import org.lwjgl.glfw.GLFWMouseButtonCallback;
 
 import java.awt.*;
 import java.awt.event.*;
 
-public class Mouse extends GLFWMouseButtonCallback {
+public class Mouse extends GLFWMouseButtonCallback,GLFWCursorPosCallback{
     Robot robot;
 
     public Mouse() {
@@ -24,7 +26,7 @@ public class Mouse extends GLFWMouseButtonCallback {
 
         double mouseX = e.getX();
         double mouseY = e.getY();
-        double defX = (Main..getWidth() + Window.frame.getX()) / 2;
+        double defX = (Main.getWindow().getWidth() + Window.frame.getX()) / 2;
         double defY = (Window.frame.getHeight() + Window.frame.getY()) / 2;
 
         Draw.camera.pan(((defX) - mouseX) / 200);
@@ -41,5 +43,15 @@ public class Mouse extends GLFWMouseButtonCallback {
     @Override
     public void invoke(long window, int button, int action, int mods) {
         //Mouse Button Pressed
+    }
+
+    @Override
+    public void invoke(long window, double xpos, double ypos) {
+
+    }
+
+    @Override
+    public void close() {
+
     }
 }

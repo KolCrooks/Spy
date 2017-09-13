@@ -1,31 +1,47 @@
 package com.NemianStudios.Display;
 
-import com.jogamp.opengl.GL2;
-import com.jogamp.opengl.glu.GLU;
-import com.sun.javafx.geom.Vec3d;
+
+import info.rockscode.util.*;
 
 
 public class Camera {
 
-    public static double yaw = 0;
-    public static double pitch = 0;
     public static double fovY = 90;
     public static double aspectratio = Window.frame.getWidth() / Window.frame.getHeight();
-    public static Vec3d pos = new Vec3d(0, 0, 0);
+    public static Vector3f position = new Vector3f(0, 0, 0);
+    public static Vector3f rotation;
 
-    public void updateCamera(GL2 gl, GLU glu) {
+    public Camera(Vector3f position, Vector3f rotation) {
+        this.position = position;
+        this.rotation = rotation;
+    }
+
+
+    public Matrix4f getViewMatrix(Camera camera) {
+        Vector3f cameraPos = camera.getPosition();
+        Vector3f rotation = camera.getRotation();
+
+        viewMatrix.identity();
+        // First do the rotation so camera rotates over its position
+        viewMatrix.rotate((float)Math.toRadians(rotation.x), new Vector3f(1, 0, 0))
+                .rotate((float)Math.toRadians(rotation.y), new Vector3f(0, 1, 0));
+        // Then do the translation
+        viewMatrix.translate(-cameraPos.x, -cameraPos.y, -cameraPos.z);
+        return viewMatrix;
+    }
+    public void updateCamera() {
         if (yaw > 360) {
             yaw -= 360;
         }
         if (yaw < -360) {
             yaw += 360;
         }
-        glu.gluLookAt(pos.x, pos.y, pos.z, pos.x + (Math.sin(Math.toRadians(yaw)) * 1000), pos.y + (Math.sin(Math.toRadians(pitch)) * 1000), pos.z + (Math.cos(Math.toRadians(yaw)) * 1000), 0, 1, 0);
+        GluLookAt(pos.x, pos.y, pos.z, pos.x + (Math.sin(Math.toRadians(yaw)) * 1000), pos.y + (Math.sin(Math.toRadians(pitch)) * 1000), pos.z + (Math.cos(Math.toRadians(yaw)) * 1000), 0, 1, 0);
         //System.out.println("X: " + pos.x + " Y: " + pos.y + " Z: " + pos.z + " Yaw: " + yaw + " Pitch: " + pitch);
     }
 
     //Moves camera to Vec3 position
-    public void MoveCamera(Vec3d pos) {
+    public void MoveCamera(Vector3f pos) {
         if (pos.z > 0) { //If Key 'W'
             Camera.pos.z += Math.cos(Math.toRadians(yaw)) * 10;
             Camera.pos.x += Math.sin(Math.toRadians(yaw)) * 10;
@@ -61,10 +77,16 @@ public class Camera {
     }
 
     public void init(GLU glu) {
-        glu.gluPerspective(fovY, aspectratio,
+        GL(fovY, aspectratio,
                 0.5f/**Specifies the distance from the viewer to the near clipping plane**/,
                 10000000.0f/**Specifies the distance from the viewer to the far clipping plane**/);
 
+    }
+    public Vector3f getPosition(){
+        return position;
+    }
+    public Vector3f getRotation(){
+        return rotation;
     }
 
 }

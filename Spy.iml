@@ -11,5 +11,6 @@
     <orderEntry type="library" name="Jogl" level="project" />
     <orderEntry type="library" name="Jbullet" level="project" />
     <orderEntry type="library" name="lwjgl" level="project" />
+    <orderEntry type="library" name="rock-util1.3_01" level="project" />
   </component>
 </module>

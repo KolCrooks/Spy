@@ -1,12 +1,12 @@
 package com.NemianStudios.Entitys;
 
+import info.rockscode.util.Vector3f;
 import org.lwjgl.opengl.*;
-import com.sun.javafx.geom.Vec3d;
 
 public class ModelEntity {
 
 
-    private Vec3d pos = new Vec3d(0, 0, 0);
+    private Vector3f pos = new Vector3f(0, 0, 0);
     private double yaw = 0;
     private double pitch = 0;
     private float scaler = 1.0f; //1.0 by default
@@ -23,7 +23,7 @@ public class ModelEntity {
         return model;
     }
 
-    public Vec3d getPos() {
+    public Vector3f getPos() {
         return pos;
     }
 

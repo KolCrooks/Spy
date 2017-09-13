@@ -7,6 +7,7 @@ import org.lwjgl.opengl.*;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.util.glu
 
 
 public class DisplayHandle {
@@ -17,6 +18,7 @@ public class DisplayHandle {
 
     private final Timer timer;
 
+    public
 
     public DisplayHandle(){
         timer = new Timer();
@@ -40,6 +42,7 @@ public class DisplayHandle {
         while ( !glfwWindowShouldClose(Main.getWindow()) ) {
             elapsedTime = timer.getElapsedTime();
             accumulator += elapsedTime;
+
 
 
 
