@@ -12,8 +12,8 @@ import java.nio.IntBuffer;
 
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.system.MemoryStack.*;
-import static org.lwjgl.system.MemoryUtil.*;
+import static org.lwjgl.system.MemoryStack.stackPush;
+import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
     public long window;
@@ -21,6 +21,9 @@ public class Window {
     public static DisplayHandle displayHandle;
     public static keyBoard keyboard;
     public static Mouse mouse;
+    public static resizeEvent resizeEvent;
+
+    public boolean fullscreen = false;
 
     public void start() {
         displayHandle = new DisplayHandle();
@@ -35,6 +38,10 @@ public class Window {
         // Terminate GLFW and free the error callback
         glfwTerminate();
         glfwSetErrorCallback(null).free();
+    }
+
+    public void applySettings() {
+
     }
 
     private void init() {
@@ -59,6 +66,7 @@ public class Window {
         // Setup a key callback. It will be called every time a key is pressed, repeated or released.
         glfwSetKeyCallback(window,keyboard = new keyBoard());
         glfwSetMouseButtonCallback(window,mouse = new Mouse());
+        glfwSetWindowSizeCallback(window, resizeEvent = new resizeEvent());
 
         // Get the thread stack and push a new frame
         try ( MemoryStack stack = stackPush() ) {

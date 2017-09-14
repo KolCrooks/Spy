@@ -3,11 +3,9 @@ package com.NemianStudios.Display;
 
 import com.NemianStudios.Main;
 import com.NemianStudios.Util.Timer;
-import org.lwjgl.opengl.*;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.util.glu
 
 
 public class DisplayHandle {
@@ -18,7 +16,6 @@ public class DisplayHandle {
 
     private final Timer timer;
 
-    public
 
     public DisplayHandle(){
         timer = new Timer();
@@ -30,10 +27,6 @@ public class DisplayHandle {
 
     //Main game loop
     public void Loop(){
-        GL.createCapabilities();
-
-        // Set the clear color
-        glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
 
         float elapsedTime;
         float accumulator = 0f;
@@ -62,6 +55,8 @@ public class DisplayHandle {
     }
     //main Image Update
     public void update(){
+
     }
+
 
 }

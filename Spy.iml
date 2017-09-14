@@ -12,5 +12,6 @@
     <orderEntry type="library" name="Jbullet" level="project" />
     <orderEntry type="library" name="lwjgl" level="project" />
     <orderEntry type="library" name="rock-util1.3_01" level="project" />
+    <orderEntry type="library" name="joml-1.9.4" level="project" />
   </component>
 </module>

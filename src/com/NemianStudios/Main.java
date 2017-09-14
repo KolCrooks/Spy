@@ -1,5 +1,6 @@
 package com.NemianStudios;
 
+import com.NemianStudios.Display.DisplayHandle;
 import com.NemianStudios.Display.Window;
 import com.NemianStudios.Util.Settings;
 public class Main {
@@ -15,5 +16,9 @@ public class Main {
     }
     public static long getWindow(){
         return mainWindow.window;
+    }
+
+    public static DisplayHandle getDisplayHandle() {
+        return Window.displayHandle;
     }
 }
